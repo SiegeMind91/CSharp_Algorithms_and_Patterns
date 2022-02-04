@@ -1,0 +1,9 @@
+Iterator Pattern
+
++ Gang of Four
+    - Provide a way to access the elements of an aggregate object 
+        sequentially without exposing its underlying representation
+
++ "Straight Talk" 
+    - Provides a way to access and iterate through collections in 
+        the same way, regardless of type
