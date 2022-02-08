@@ -1,0 +1,9 @@
+Repository Pattern
+
++ MSDN
+    - A repository separates the business logic from the 
+    interactions with the underlying data source
+
++ "Straight Talk"
+    - Allows programmers to create a layer of abstraction 
+        between an application and its data 
