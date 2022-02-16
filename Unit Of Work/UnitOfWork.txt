@@ -1,0 +1,8 @@
+Unit of Work Pattern
+
++ Martin Fowler
+    - Maintains a list of objects affected by a business transaction and coordinates the writing out of changs and the resolution of concurrency problems
+
++ "Straight Talk"
+    - Allows programmers to update and keep track of changes made in several objects 
+
