@@ -1,0 +1,44 @@
+using System;
+using System.Windows.Forms;
+using System.Data.SqlClient;
+
+namespace SQLServerConnection
+{
+    public partial class ConnectionForm : Form
+    {
+        public ConnectionForm()
+        {
+            InitializeComponent();
+        }
+        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string cnnString = null;
+            SqlConnection conn;
+            SqlCommand command;
+            string sql = null;
+            SqlDataReader dataReader;
+            cnnString = "Data Source=ServerName;Initial Catalog=DatabaseName;User ID=UserName;Password=Password";
+            sql = "SELECT Column1, Column2, Column3 FROM YourDatabase";
+            conn = new SqlConnection(cnnString);
+            
+            try
+            {
+                conn.Open();
+                command = new SqlCommand(sql, conn);
+                dataReader = command.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    MessageBox.Show(dataReader.GetValue(0) + " - " + dataReader.GetValue(1) + " - " + dataReader.GetValue(2));
+                }
+                dataReader.Close();
+                command.Dispose();
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something went wrong! Details: " + ex.Message);
+            }
+        }
+    }
+}
