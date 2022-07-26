@@ -1,0 +1,15 @@
+//Enumerations in C# allow us to utilize a static list of constants multiple times without having to create multiple lists.
+//They allow us to create categories of things and then place values inside those categories that we'll use again and again
+//Enumerations are value types and are stored on the stack, rather than on the heap
+
+//As you can see below, each item is also assigned an integer value
+//You can use either value when coding, and they always start at 0
+enum Season
+{
+    Spring, //0 
+    Summer, //1
+    Autumn, //2
+    Winter  //3
+}
+
+//Enums are perfect for lists of things that won't change, like seasons or months or even the face of playing cards. 
