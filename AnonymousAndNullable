@@ -1,0 +1,17 @@
+//In C# there are tons of options for the classes of your objects, but what if you need it to be nothing? 
+// Or what if you need to have an object, with a few properties, but you're only going to need it right now
+// and don't want to build a class around it? That's where Anonymous classes and Nullable types come in. 
+
+//Anonymous Classes
+//These allow us to declare an object, with no determined class, and have it contain data
+//Below we create an anonymous object, and then give it some properties
+var myAnonymousObject = new {Name = "John Smith", Age = 27, Gender="M", FavoriteColor = "Red"};
+//Then we can query those properties just like any other object
+Console.WriteLine($"Your object's name is {myAnonymousObject.Name} and it's {myAnonymousObject.Age}")
+Console.WriteLine($"It is a {myAnonymousObject.Gender} and its' favorite color is {myAnonymousObject.FavoriteColor}")
+
+
+//Nullable Types
+//Nullable types allow us to not give a value to a variable. This helps initialize a given variable, and it helps
+// when checking against the variable for certain logic. 
+int? myInt = null;
